@@ -82,12 +82,18 @@ WSGI_APPLICATION = 'propertybooking.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'propertyBooking',
-        'USER': 'postgres',
-        'PASSWORD': 'hello_abhi',
-        'HOST': 'localhost'
+        'NAME': 'neondb',
+        'USER': 'neondb_owner',
+        'PASSWORD': 'npg_bHOkf8eJ6Czw',
+        'HOST': 'ep-weathered-sun-a5t64u3e-pooler.us-east-2.aws.neon.tech',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+            'options': '-c timezone=UTC'
+        }
     }
 }
+
 
 
 # Password validation
@@ -114,13 +120,15 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+# TIME_ZONE = 'UTC'
+
+ 
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+# USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
